@@ -4,7 +4,9 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --bgColor: #EAF2F8;
     --fontColor: #17202A;
+    --secundary: #AED6F1;
     --contrast: #2874A6;
+    --blackOpacity: #0000004D;
   }
 
   *,

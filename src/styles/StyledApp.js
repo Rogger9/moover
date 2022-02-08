@@ -5,4 +5,9 @@ export const StyledApp = styled(DivFlex)`
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
+
+  a {
+    color: var(--fontColor);
+    text-decoration: none;
+  }
 `
