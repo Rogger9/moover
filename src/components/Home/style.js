@@ -15,4 +15,5 @@ export const StyledHome = styled(DivFlex)`
 export const StyledMain = styled(DivFlex)`
   width: 100%;
   height: calc(100vh - 6rem);
+  padding: 1rem 2rem;
 `
