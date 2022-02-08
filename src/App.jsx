@@ -1,16 +1,20 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Page404 from './components/404Page'
-import Contact from './components/Contact'
 import Home from './components/Home'
-import Orders from './components/Orders'
-import Tracking from './components/Tracking'
-import Welcome from './components/Welcome'
+import Loader from './components/Loader'
 import { GlobalStyles } from './styles/GlobalStyles'
+
+const Welcome = lazy(() => import('./components/Welcome'))
+const Orders = lazy(() => import('./components/Orders'))
+const Tracking = lazy(() => import('./components/Tracking'))
+const Contact = lazy(() => import('./components/Contact'))
+const Page404 = lazy(() => import('./components/404Page'))
 
 function App () {
   return (
     <BrowserRouter>
       <GlobalStyles />
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path='/moover' element={<Home />}>
             <Route index element={<Welcome />} />
@@ -20,6 +24,7 @@ function App () {
           </Route>
           <Route path='*' element={<Page404 />} />
         </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
