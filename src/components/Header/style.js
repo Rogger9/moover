@@ -7,4 +7,9 @@ export const StyledHeader = styled.header`
   display: flex;
   padding: 0 1rem;
   box-shadow: 0 0 4px var(--blackOpacity);
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
 `
